@@ -1,0 +1,14 @@
+[package]
+name = "flip-mode"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+
+[profile.release]
+lto = true
+opt-level = "s"            
+panic = "abort"            
+split-debuginfo = "packed"  
+strip = "symbols"
